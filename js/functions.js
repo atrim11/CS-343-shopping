@@ -1,7 +1,7 @@
 /* define your functions here */
 
 console.log(cart);
-
+let subTotal = 0;
 function calculateTotal(q, p) {
   return q * p;
 }
@@ -26,10 +26,11 @@ function outputTableBody() {
   for (let item of cart) {
     let total = calculateTotal(item.quantity, item.product.price);
     outputCartRow(item, total);
+    subTotal = calculateTotal(item.quantity, item.product.price);
   }
 }
 
 function outputTotalRow(name, total) {
-
+    
 }
 
